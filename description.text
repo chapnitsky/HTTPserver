@@ -1,0 +1,20 @@
+README
+Doron Chapnitsky
+316231190
+
+Exercise 2 - TCP HTTP Client
+
+===Description ===
+
+client.c - parsing URL and arguments to HTTP TCP request.
+functions:
+perr(char *str, char** toFree, int size) - printing to perror due to an error with description in str. Before exiting, freeing all of the heap allocated variables with toFree that saves the addresses of them.
+
+err(char* str, char** toFree, int size) - same as perr but becuase its not a faild system call it prints to stdout with printf in str.
+
+fly(char **toFree, int size) - the implementation of freeing the memory.
+
+reallocate(char **toFree, int *cur_size)  - doubling the array size with realloc and updating the cur_size variable.
+
+main(int argc, char *argv[]) - the implementation of creating a connection between the system and the host after parsing the required data. It send a socket with protocol TCP. The port equals 80 by default, but is customable.
+
